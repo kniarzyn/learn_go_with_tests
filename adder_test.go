@@ -14,3 +14,7 @@ func TestAdder(t *testing.T) {
 	}
 }
 
+func ExampleAdd() {
+	fmt.Println(Add(7, 9))
+	// Output: 16
+}
