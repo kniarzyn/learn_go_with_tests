@@ -24,3 +24,13 @@ func ExampleRepeat() {
 	fmt.Println(res)
 	// Output: aaaaaaa
 }
+
+func TestFunWithFieldsFunc(t *testing.T) {
+	var got []string
+
+	for s := range FunWithFieldsFunc("ala;ma;kota") {
+		got = append(got, s)
+	}
+
+	assert.Equal(t, []string{"ala", "ma", "kota"}, got)
+}
